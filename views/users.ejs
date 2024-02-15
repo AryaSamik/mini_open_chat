@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Users :</h1>
+    <br>
+    <% users.forEach(element => { %>
+        <div class="user">
+            element_id: <%= element._id %>
+            <br>
+            <div class="name"> name: <%= element.name %> </div>
+            <br>
+            <div class="username"> username: <%= element.username %> </div>
+            <div> phone: <%= element.phone %> </div>
+            version: <%= element.__v %>
+        </div>
+        <form action="/<%= element.username %>/chats" method="get">
+            <button>Chats</button>
+        </form>
+        <hr>
+        <br>
+        <br>
+    <% }) %>
+</body>
+</html>

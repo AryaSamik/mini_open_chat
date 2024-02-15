@@ -1,0 +1,47 @@
+body{
+    margin-left: 20px;
+}
+.chat{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+.msg{
+    background-color: dodgerblue;
+    color: white;
+}
+
+button{
+    background-color: aliceblue;
+    border: 1px solid dodgerblue;
+    border-radius: 10px;
+    padding: 10px;
+    transition-duration: 200ms;
+}
+button:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+
+input{
+    margin:10px;
+    padding: 5px 5px;
+    color: black;
+    border: 1px dodgerblue solid;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+#update-form{
+    background-color: aliceblue;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+textarea{
+    border: 1px solid dodgerblue;
+    border-radius: 20px;
+    padding: 10px;
+}

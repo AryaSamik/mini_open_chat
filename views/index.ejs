@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Whatsapp</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Chats :</h1>
+    <br>
+    <% chats.forEach(element => { %>
+        <div class="chat">
+            <!-- id: <%= element._id %> -->
+            <!-- <br> -->
+            from: <%= element.from %>
+            <br>
+            <div class="msg"> msg: <%= element.msg %> </div>
+            <!-- <br> -->
+            to: <%= element.to %>
+            <!-- <br> -->
+            <!-- createdAt: <%= element.created_at %> -->
+            <!-- <br> -->
+            <!-- version: <%= element.__v %> -->
+            <br>
+            <br>
+            <a href="/chats/<%= element._id %>/update">Change Message</a>
+            <br><br>
+            <form action="/chats/<%= element._id %>?_method=delete" method="post">
+                <button>Delete</button>
+            </form>
+        </div>
+        <hr>
+    <% }) %>
+    <form action="/chats/new" method="get">
+        <button>New Chat</button>
+    </form>
+</body>
+</html>
